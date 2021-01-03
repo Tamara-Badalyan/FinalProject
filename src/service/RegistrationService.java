@@ -32,7 +32,7 @@ public class RegistrationService implements IRegistrationService {
 
         System.out.println("Full name -> (John Smith)");
         String fullName = s.nextLine();
-        s.nextLine();
+        //s.nextLine();
         System.out.println("Username -> length>10 and not duplicate");
         String username = s.next();
         System.out.println("Email -> example@gmail.com");
