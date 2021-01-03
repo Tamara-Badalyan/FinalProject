@@ -1,7 +1,6 @@
 package interfaces;
 
 import model.Users.RegistrationModel;
-import users.LoginModel;
 
 import java.util.ArrayList;
 
