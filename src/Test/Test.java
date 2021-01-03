@@ -17,7 +17,7 @@ public class Test {
         RegistrationService regService = new RegistrationService();
         IActionService<Technique> actionService = new ActionService();
         String type = null, path = null;
-        System.out.println("Hi please select -> 1.Registration, 2.Login");
+        System.out.println("Hi please select -> 1.Registration, 2.Login(or any symbol)");
         int r = s.nextInt();
         if (r == 1) {
             var model = regService.createRegModel();
