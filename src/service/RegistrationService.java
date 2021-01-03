@@ -68,7 +68,7 @@ public class RegistrationService implements IRegistrationService {
         var listOfUsers = GetList(Connection.DB_CONTEXT_PATH);
         for (var item :
                 listOfUsers) {
-            if (item.getUserName().compareTo(userName) == 0 && item.getPassword().compareTo(password) == 0)
+            if (item.getUserName().compareTo(userName) == 0 && item.getPassword().compareTo(RegistrationModel.md5Custom(password)) == 0)
                 return true;
         }
         return false;
