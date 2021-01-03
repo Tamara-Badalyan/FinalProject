@@ -14,10 +14,10 @@ public  class RegistrationModel {
     private String password;
 
     public RegistrationModel(String fullName, String userName, String email, String password) {
-        this.fullName = getFullName();
-        this.userName = getUserName();
-        this.email = getEmail();
-        this.password = getPassword();
+        setFullName(fullName);
+        setUserName(userName);
+        setEmail(email);
+        setPassword(password);
     }
 
     public String getFullName() {
@@ -61,7 +61,8 @@ public  class RegistrationModel {
     public void setUserName(String userName) {
         if(userName.length()>10 && uniqueCharachters(userName))
             this.userName = userName;
-        throw new InputException();
+        else
+            throw new InputException();
     }
 
     public String getEmail() {
