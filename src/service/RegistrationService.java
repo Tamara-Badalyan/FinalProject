@@ -3,7 +3,6 @@ package service;
 import interfaces.IRegistrationService;
 import model.Users.RegistrationModel;
 import statics.Connection;
-import users.LoginModel;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,7 +37,7 @@ public class RegistrationService implements IRegistrationService {
         String username = s.next();
         System.out.println("Email -> example@gmail.com");
         String email = s.next();
-        System.out.println("Password -> at leeast 2 uppercase,3 digits,length >10");
+        System.out.println("Password -> at least 2 uppercase,3 digits,length >10");
         String password = s.next();
         return new RegistrationModel(fullName, username, email, password);
     }
