@@ -81,10 +81,14 @@ public  class RegistrationModel {
     }
 
     public void setPassword(String password) {
-        if(isCorrectPassword(password))
-            this.password = md5Custom(password);
-        else
-            throw new InputException();
+        if(password.length()==32)
+            this.password=password;
+        else {
+            if (isCorrectPassword(password))
+                this.password = md5Custom(password);
+            else
+                throw new InputException();
+        }
     }
 
     public  static  String md5Custom(String message) {
